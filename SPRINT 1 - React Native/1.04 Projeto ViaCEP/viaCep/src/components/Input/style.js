@@ -23,22 +23,23 @@ export const InputBoxMedium = styled(InputBox)`
   padding: 0;
 `;
 
-export const InputLabel = styled.Text`
-  font-family: Roboto_700Bold;
-  font-size: 18px;
-  color: #047cd3;
-  width: 100%;
-`;
-export const Input = styled.TextInput`
+export const InputText = styled.TextInput`
   height: 66px;
   width: 100%;
 
   font-family: Roboto_500Medium;
   font-size: 18px;
-  color: #a1a1a1;
 
   border-radius: 10px;
   border-color: #a1a1a1;
   border-width: 2px;
+
   padding: 20px;
+  margin-top: 10px;
+
+  ${(props) =>
+    props.editable &&
+    css`
+      background-color: #f6f6f6;
+    `}
 `;

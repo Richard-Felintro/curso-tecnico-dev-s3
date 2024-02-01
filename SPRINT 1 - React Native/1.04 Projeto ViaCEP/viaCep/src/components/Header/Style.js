@@ -13,6 +13,11 @@ export const HeaderContainer = styled.SafeAreaView`
 
   background-color: #fecc2b;
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+  shadow-color: 'black';
+  shadow-opacity: 1;
+  shadow-offset: 0px 20px;
+  shadow-radius: 15px;
+  elevation: 3;
 `;  
 
 //* Texto do Header

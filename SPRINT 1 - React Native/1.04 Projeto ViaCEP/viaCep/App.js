@@ -6,18 +6,17 @@ import {
   useFonts,
 } from "@expo-google-fonts/roboto";
 
-import { Container } from "./src/components/Container/Container";
-import { HeaderContainer, HeaderTitle } from "./src/components/Header/Header";
+import { Container } from "./src/components/Container/Style";
+import { HeaderContainer, HeaderTitle } from "./src/components/Header/Style";
 import {
   Input,
   InputBox,
   InputBoxMedium,
   InputBoxSmall,
-  InputLabel,
   InputContainerDouble,
-} from "./src/components/Input/Input";
+} from "./src/components/Input/Style";
+import { Label } from "./src/components/Label/style";
 
-import { Styles } from "./style";
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
     Roboto_500Medium,
@@ -28,37 +27,39 @@ export default function App() {
   }
   return (
     <Container>
-      <HeaderContainer style={Styles.header}>
+      <Header />
+      <Home />
+      <HeaderContainer>
         <HeaderTitle>Consumo de ApiCEP</HeaderTitle>
       </HeaderContainer>
       <StatusBar style="auto" />
       <InputBox>
-        <InputLabel> Informar CEP:</InputLabel>
+        <Label> Informar CEP:</Label>
         <Input placeholder="Cep..." />
       </InputBox>
       <InputBox>
-        <InputLabel> Logradouro:</InputLabel>
+        <Label> Logradouro:</Label>
         <Input placeholder="Logradouro..." />
       </InputBox>
       <InputBox>
-        <InputLabel> Bairro:</InputLabel>
+        <Label> Bairro:</Label>
         <Input placeholder="Bairro..." />
       </InputBox>
       <InputBox>
-        <InputLabel> Cidade:</InputLabel>
+        <Label> Cidade:</Label>
         <Input placeholder="Cidade..." />
       </InputBox>
       <InputContainerDouble>
         <InputBoxMedium>
-          <InputLabel> Estado:</InputLabel>
+          <Label> Estado:</Label>
           <Input placeholder="Estado..." />
         </InputBoxMedium>
         <InputBoxSmall>
-          <InputLabel> UF:</InputLabel>
+          <Label> UF:</Label>
           <Input placeholder="UF" />
         </InputBoxSmall>
       </InputContainerDouble>
-      <StatusBar translucent backgroundColor="transparent"/>
+      <StatusBar translucent backgroundColor="transparent" />
     </Container>
   );
 }
