@@ -1,9 +1,11 @@
 import { FieldContent } from "./style";
+import { InputLabel } from "../Label";
+import { Input } from "../Input";
 
 export const BoxInput = ({
   fieldWidth = 100,
   editable = false,
-  textLabel,
+  labelText,
   placeholder,
   fieldValue = null,
   onChangeText = null,
@@ -12,13 +14,13 @@ export const BoxInput = ({
 }) => {
   return (
     <FieldContent fieldWidth={fieldWidth}>
-      <Label textLabel={textLabel} />
+      <InputLabel labelText={labelText} />
       <Input
         editable={editable}
         placeholder={placeholder}
-        value={fieldValue}
+        fieldValue={fieldValue}
         onChangeText={onChangeText}
-        type={keyType}
+        keyType={keyType}
         maxLength={maxLength}
       />
     </FieldContent>

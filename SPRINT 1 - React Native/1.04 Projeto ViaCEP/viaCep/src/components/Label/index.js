@@ -1,9 +1,9 @@
-import { InputLabel } from "./style";
+import { Label } from "./style";
 
-export const Label = ({ labelText }) => {
+export const InputLabel = ({ labelText }) => {
   return (
     <>
-      <InputLabel>{labelText}</InputLabel>
+      <Label>{labelText}</Label>
     </>
   );
 };

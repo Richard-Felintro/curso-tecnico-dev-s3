@@ -1,21 +1,23 @@
-import { InputText } from "./Style"
+import { InputText } from "./style";
 
 export const Input = ({
-    placeholder,
-    editable,
-    fieldValue,
-    onChangeText,
-    keyType,
-    maxLength
+  editTable,
+  placeholder,
+  fieldValue,
+  onChangeText,
+  keyType,
+  maxLength,
+  editable
 }) => {
-    return(
-        <InputText>
-        placeholder={placeholder}
-        editable={editable}
-        keyboardType={keyType}
-        maxLength={maxLength}
-        value={fieldValue}
-        onChangeText={onChangeText}
-        </InputText>
-    )
-}
+  return (
+    <InputText
+      editTable={editTable}
+      placeholder={placeholder}
+      value={fieldValue}
+      onChangeText={onChangeText}
+      type={keyType}
+      maxLength={maxLength}
+      editable={editable}
+    />
+  );
+};

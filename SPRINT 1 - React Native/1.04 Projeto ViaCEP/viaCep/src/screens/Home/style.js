@@ -8,3 +8,7 @@ export const ContainerForm = styled.ScrollView`
   margin: 20px 10%;
   gap: 20px;
 `;
+export const ContainerFormRow = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
